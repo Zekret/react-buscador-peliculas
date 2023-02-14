@@ -8,7 +8,7 @@ export function useMovies ({ search, sort }) {
     const previousSearch = useRef(search)
 
     const getMovies = useMemo (() => {
-        return async () => {
+        return async ({ search }) => {
             if (search === previousSearch.current) return
     
            try {
